@@ -1,0 +1,36 @@
+﻿// TODO:
+// Maak hier een methode VigenereDecode(string text, string key)
+//
+// Wat deze methode moet doen:
+// - Ontvang het geëncodeerde bericht (text)
+// - Ontvang het sleutelwoord (key)
+// - Geef het gedecrypte bericht terug
+//
+// Stappen (hint):
+// 1. Maak een lege string aan voor het resultaat
+// 2. Houd een aparte index bij voor het sleutelwoord (bijv. keyIndex)
+// 3. Loop door elke character in de tekst
+//
+// Voor elke character:
+// - Controleer of het een letter is
+//   - Zo niet: voeg het teken ongewijzigd toe aan het resultaat
+//   - Ga verder naar de volgende character
+//
+// - Pak de bijbehorende letter uit het sleutelwoord met keyIndex
+//   - Gebruik modulo (%) zodat je opnieuw bij het begin van de sleutel begint
+//
+// - Zet de sleutelletter om naar een shift
+//   - Hint: 'A' = 0, 'B' = 1, ..., 'Z' = 25
+//
+// - Trek deze shift AF van de letter uit de tekst
+//   - Dit is het verschil tussen encoden en decoden
+//
+// - Zorg dat je binnen het alfabet blijft (A-Z of a-z)
+//   - Als je onder 'A' of 'a' komt, tel je 26 erbij op
+//
+// - Voeg de nieuwe letter toe aan het resultaat
+// - Verhoog daarna pas de keyIndex
+//
+// Tip:
+// - De keyIndex mag NIET omhoog gaan bij spaties of leestekens
+// - Denk goed na over hoofdletters en kleine letters
